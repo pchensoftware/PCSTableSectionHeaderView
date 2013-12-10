@@ -1,6 +1,6 @@
 //
-//  PCSTableHeaderView.m
-//  PCSTableHeaderViewExample
+//  PCSTableSectionHeaderView.m
+//  PCSTableSectionHeaderViewExample
 //
 //  Created by Peter Chen on 12/9/13.
 //  Copyright (c) 2013 Peter Chen. All rights reserved.
@@ -23,7 +23,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPCSTableHeaderView_DefaultLeftMargin, 0, self.frame.size.width - 2 * kPCSTableHeaderView_DefaultLeftMargin, self.frame.size.height)];
+        self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPCSTableSectionHeaderView_DefaultLeftMargin, 0,
+                                                                   self.frame.size.width - 2 * kPCSTableSectionHeaderView_DefaultLeftMargin, self.frame.size.height)];
         self.textLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.textLabel.font = [UIFont systemFontOfSize:14];
         self.textLabel.textColor = [UIColor colorWithWhite:0.45 alpha:1];
@@ -80,7 +81,7 @@
     [self.rightButton setTitle:rightButtonText forState:UIControlStateNormal];
     
     CGRect buttonFrame = self.rightButton.frame;
-    buttonFrame.size.width = [self.rightButton sizeThatFits:CGSizeMake(kMaxRightButtonWidth, self.frame.size.height)].width + 2 * kPCSTableHeaderView_DefaultLeftMargin;
+    buttonFrame.size.width = [self.rightButton sizeThatFits:CGSizeMake(kMaxRightButtonWidth, self.frame.size.height)].width + 2 * kPCSTableSectionHeaderView_DefaultLeftMargin;
     buttonFrame.origin.x = self.frame.size.width - buttonFrame.size.width;
     self.rightButton.frame = buttonFrame;
 }

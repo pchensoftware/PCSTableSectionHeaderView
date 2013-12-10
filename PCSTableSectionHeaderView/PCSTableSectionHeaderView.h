@@ -1,6 +1,6 @@
 //
-//  PCSTableHeaderView.h
-//  PCSTableHeaderViewExample
+//  PCSTableSectionHeaderView.h
+//  PCSTableSectionHeaderViewExample
 //
 //  Created by Peter Chen on 12/9/13.
 //  Copyright (c) 2013 Peter Chen. All rights reserved.
@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#define kPCSTableHeaderView_StandardHeight 44
-#define kPCSTableHeaderView_DefaultLeftMargin 15
+#define kPCSTableSectionHeaderView_StandardHeight 44
+#define kPCSTableSectionHeaderView_DefaultLeftMargin 15
 
 @class PCSTableSectionHeaderView;
 
-@protocol PCSTableHeaderViewDelegate <NSObject>
+@protocol PCSTableSectionHeaderViewDelegate <NSObject>
 - (void)tableHeaderViewRightButtonTapped:(PCSTableSectionHeaderView *)view;
 @end
 
@@ -30,6 +30,6 @@
 @property (nonatomic, strong) NSString *rightButtonText;
 
 @property (nonatomic, assign) int tableViewSection;
-@property (nonatomic, weak) id<PCSTableHeaderViewDelegate> delegate;
+@property (nonatomic, weak) id<PCSTableSectionHeaderViewDelegate> delegate;
 
 @end

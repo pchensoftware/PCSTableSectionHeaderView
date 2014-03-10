@@ -17,9 +17,9 @@
 - (void)tableHeaderViewRightButtonTapped:(PCSTableSectionHeaderView *)view;
 @end
 
-@interface PCSTableSectionHeaderView : UIView
+@interface PCSTableSectionHeaderView : UITableViewHeaderFooterView
 
-@property (nonatomic, readonly) UILabel *textLabel;
+//@property (nonatomic, readonly) UILabel *textLabel;
 @property (nonatomic, strong) NSString *text; // Will convert string to uppercase. ie. Convenience for self.textLabel.text = [mystring uppercaseString]
 
 @property (nonatomic, strong) UIView *rightView; // This will be automatically right-aligned and vertically centered to the header view

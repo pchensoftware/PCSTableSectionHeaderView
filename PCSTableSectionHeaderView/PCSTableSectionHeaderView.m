@@ -12,23 +12,26 @@
 
 @interface PCSTableSectionHeaderView()
 
-@property (nonatomic, strong) UILabel *textLabel;
+//@property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) UIButton *rightButton;
 
 @end
 
 @implementation PCSTableSectionHeaderView
 
-- (id)initWithFrame:(CGRect)frame
+//- (id)initWithFrame:(CGRect)frame
+- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
+       /*
         self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPCSTableSectionHeaderView_DefaultLeftMargin, 0,
                                                                    self.frame.size.width - 2 * kPCSTableSectionHeaderView_DefaultLeftMargin, self.frame.size.height)];
         self.textLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.textLabel.font = [UIFont systemFontOfSize:14];
         self.textLabel.textColor = [UIColor colorWithWhite:0.45 alpha:1];
         [self addSubview:self.textLabel];
+        */
     }
     return self;
 }
@@ -51,7 +54,7 @@
     rightViewFrame.origin.x = self.frame.size.width - _rightView.frame.size.width;
     rightView.frame = rightViewFrame;
     rightView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
-    [self addSubview:_rightView];
+    [self.contentView addSubview:_rightView];
 }
 
 - (void)_createRightButton {

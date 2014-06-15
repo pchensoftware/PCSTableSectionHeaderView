@@ -22,6 +22,7 @@
 //@property (nonatomic, readonly) UILabel *textLabel;
 @property (nonatomic, strong) NSString *text; // Will convert string to uppercase. ie. Convenience for self.textLabel.text = [mystring uppercaseString]
 @property (nonatomic, assign) int customTextLabelLeftMargin; // override self.tableView.separatorInset. defaults to -1 = ignore.
+@property (nonatomic, assign) int customTextLabelBottomMargin; // override self.textLabel.y
 
 @property (nonatomic, strong) UIView *rightView; // This will be automatically right-aligned and vertically centered to the header view
 

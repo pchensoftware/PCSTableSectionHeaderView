@@ -25,6 +25,7 @@
     self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
        self.customTextLabelLeftMargin = -1;
+       self.customTextLabelBottomMargin = -1;
        
        /*
         self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPCSTableSectionHeaderView_DefaultLeftMargin, 0,
@@ -43,6 +44,9 @@
    
    if (self.customTextLabelLeftMargin >= 0)
       self.textLabel.x = self.customTextLabelLeftMargin;
+   
+   if (self.customTextLabelBottomMargin >= 0)
+      self.textLabel.maxY = self.height - self.customTextLabelBottomMargin;
 }
 
 - (NSString *)text {
